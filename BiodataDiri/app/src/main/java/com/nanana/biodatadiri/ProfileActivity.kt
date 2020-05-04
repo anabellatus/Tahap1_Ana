@@ -26,6 +26,10 @@ class ProfileActivity : AppCompatActivity() {
         btnCall.setOnClickListener {
             dialPhoneNumber(txtTelp.text.toString())
         }
+
+        btnAbout.setOnClickListener {
+            startActivity(Intent(this, AboutActivity::class.java))
+        }
     }
 
     private fun dialPhoneNumber(phoneNumber: String){
@@ -67,11 +71,13 @@ class ProfileActivity : AppCompatActivity() {
         val email = bundle.getString("email")
         val telp = bundle.getString("telp")
         val alamat = bundle.getString("alamat")
+        val umur = bundle.getString("umur")
 
         txtName.text = nama
         txtGender.text = gender
         txtEmail.text = email
         txtTelp.text = telp
         txtAddress.text = alamat
+        txtAge.text = umur
     }
 }

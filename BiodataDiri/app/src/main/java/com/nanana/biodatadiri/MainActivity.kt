@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     private var telpInput: String = ""
     private var alamatInput: String = ""
     private var genderInput: String = ""
+    private var ageInput: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,13 +36,15 @@ class MainActivity : AppCompatActivity() {
         telpInput = edtTelp.text.toString()
         alamatInput = edtAddress.text.toString()
         genderInput = spinnerGender.selectedItem.toString()
+        ageInput = edtUmur.text.toString()
 
         when {
-            namaInput.isEmpty() -> edtName!!.error = "Nama tidak boleh kosong"
+            namaInput.isEmpty() -> edtName.error = "Nama tidak boleh kosong"
             genderInput.equals("Pilih Jenis Kelamin", ignoreCase = true ) -> tampilToast("Jenis Kelamin harus dipilih")
-            emailInput.isEmpty() -> edtEmail!!.error = "Email tidak boleh kosong"
-            telpInput.isEmpty() -> edtTelp!!.error = "Telp tidak boleh kosong"
+            emailInput.isEmpty() -> edtEmail.error = "Email tidak boleh kosong"
+            telpInput.isEmpty() -> edtTelp.error = "Telp tidak boleh kosong"
             alamatInput.isEmpty() -> edtAddress.error = "Alamat tidak boleh kosong"
+            ageInput.isEmpty() -> edtUmur.error = "Umur tidak bolej kosong"
             else -> {
                 tampilToast("Navigasi ke halaman profil")
                 goToProfileActivity()
@@ -63,6 +66,7 @@ class MainActivity : AppCompatActivity() {
         bundle.putString("email", emailInput)
         bundle.putString("telp", telpInput)
         bundle.putString("alamat", alamatInput)
+        bundle.putString("umur", ageInput)
 
         intent.putExtras(bundle)
 

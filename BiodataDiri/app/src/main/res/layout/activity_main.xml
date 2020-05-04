@@ -8,6 +8,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="25dp"
         android:orientation="vertical"
         tools:context=".MainActivity">
 
@@ -16,6 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_margin="16dp"
+            android:textColor="@color/black"
             android:fontFamily="casual"
             android:text="@string/biodata_diri"
             android:textSize="20sp"
@@ -26,6 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
+            android:textColor="@color/black"
             android:hint="@string/nama" />
 
         <Spinner
@@ -36,18 +39,27 @@
             android:entries="@array/jenis_kelamin" />
 
         <EditText
+            android:id="@+id/edtUmur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_margin="16dp"
+            android:hint="Umur (th)" />
+
+        <EditText
             android:id="@+id/edtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:layout_margin="16dp"
             android:hint="@string/email" />
-
 
         <EditText
             android:id="@+id/edtTelp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
+            android:textColor="@color/black"
             android:hint="@string/telp"
             android:inputType="phone" />
 
@@ -57,6 +69,7 @@
             android:layout_height="120dp"
             android:layout_margin="16dp"
             android:hint="@string/alamat"
+            android:textColor="@color/black"
             android:inputType="textMultiLine" />
 
         <Button
@@ -64,6 +77,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
+            android:textColor="@color/white"
+            android:background="@drawable/button_bg"
             android:text="@string/save" />
 
     </LinearLayout>
