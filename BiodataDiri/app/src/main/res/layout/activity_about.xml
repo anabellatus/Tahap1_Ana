@@ -12,8 +12,14 @@
         android:layout_height="250dp"
         android:background="@color/colorPrimary" />
 
-    <View
+    <TextView
         android:id="@+id/up"
+        android:text="@string/about_me"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:fontFamily="casual"
         android:layout_width="match_parent"
         android:layout_height="120dp"/>
 

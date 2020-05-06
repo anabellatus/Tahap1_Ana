@@ -22,7 +22,7 @@
     <string name="phone_value">085123123123</string>
     <string name="edit_nama">EDIT NAMA</string>
     <string name="telepon">TELEPON</string>
-    <string name="about_me">about me</string>
+    <string name="about_me">About Me</string>
     <string-array name="jenis_kelamin">
         <item>Pilih Jenis Kelamin</item>
         <item>Laki-Laki</item>
