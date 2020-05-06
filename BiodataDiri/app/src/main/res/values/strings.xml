@@ -7,6 +7,22 @@
     <string name="telp">Telp</string>
     <string name="alamat">Alamat</string>
     <string name="save">SIMPAN</string>
+    <string name="titik_dua"> : </string>
+    <string name="my_address">Jalan Jodipan Wetan IIIC/17, Malang, Jawa Timur, Indonesia</string>
+    <string name="my_number">0895342613748</string>
+    <string name="my_email">anabellatus@gmail.com</string>
+    <string name="my_name">Ana Bellatus M</string>
+    <string name="age">Umur (th)</string>
+    <string name="edit_tittle">Edit Profil</string>
+    <string name="dummy_text_name">dummy text name</string>
+    <string name="gender">Jenis Kelamin</string>
+    <string name="gender_field">laki-laki</string>
+    <string name="age_value">0</string>
+    <string name="dummy_mail">dummy@gmail.com</string>
+    <string name="phone_value">085123123123</string>
+    <string name="edit_nama">EDIT NAMA</string>
+    <string name="telepon">TELEPON</string>
+    <string name="about_me">about me</string>
     <string-array name="jenis_kelamin">
         <item>Pilih Jenis Kelamin</item>
         <item>Laki-Laki</item>

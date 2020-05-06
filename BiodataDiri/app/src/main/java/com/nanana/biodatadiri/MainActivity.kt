@@ -38,18 +38,43 @@ class MainActivity : AppCompatActivity() {
         genderInput = spinnerGender.selectedItem.toString()
         ageInput = edtUmur.text.toString()
 
-        when {
-            namaInput.isEmpty() -> edtName.error = "Nama tidak boleh kosong"
-            genderInput.equals("Pilih Jenis Kelamin", ignoreCase = true ) -> tampilToast("Jenis Kelamin harus dipilih")
-            emailInput.isEmpty() -> edtEmail.error = "Email tidak boleh kosong"
-            telpInput.isEmpty() -> edtTelp.error = "Telp tidak boleh kosong"
-            alamatInput.isEmpty() -> edtAddress.error = "Alamat tidak boleh kosong"
-            ageInput.isEmpty() -> edtUmur.error = "Umur tidak bolej kosong"
-            else -> {
-                tampilToast("Navigasi ke halaman profil")
-                goToProfileActivity()
-            }
+
+        if (error()){
+            tampilToast("Navigasi ke halaman profil")
+            goToProfileActivity()
         }
+    }
+
+    private fun error(): Boolean {
+        if (namaInput.isEmpty()) {
+            edtName.error = "Nama tidak boleh kosong"
+            edtName.requestFocus()
+        }
+
+        if (genderInput.equals("Pilih Jenis Kelamin", ignoreCase = true)) {
+            tampilToast("Jenis Kelamin harus dipilih")
+        }
+
+        if (emailInput.isEmpty()) {
+            edtEmail.error = "Email tidak boleh kosong"
+            edtEmail.requestFocus()
+        }
+
+        if (telpInput.isEmpty()){
+            edtTelp.error = "Telp tidak boleh kosong"
+            edtTelp.requestFocus()
+        }
+
+        if (alamatInput.isEmpty()){
+            edtAddress.error = "Alamat tidak boleh kosong"
+            edtAddress.requestFocus()
+        }
+
+        if (ageInput.isEmpty()){
+            edtUmur.error = "Umur tidak bolej kosong"
+            edtUmur.requestFocus()
+        }
+        return true
     }
 
     private fun tampilToast(message: String) {
@@ -71,13 +96,13 @@ class MainActivity : AppCompatActivity() {
         intent.putExtras(bundle)
 
         startActivity(intent)
-}
+    }
 
     private fun setDataSpinnerGender() {
         val adapter = ArrayAdapter.createFromResource(
             this, R.array.jenis_kelamin, android.R.layout.simple_spinner_item
         )
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            spinnerGender.adapter = adapter
-        }
+        spinnerGender.adapter = adapter
     }
+}

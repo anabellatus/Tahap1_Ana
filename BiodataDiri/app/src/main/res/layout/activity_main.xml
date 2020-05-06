@@ -8,8 +8,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="25dp"
         android:orientation="vertical"
+        android:paddingTop="14dp"
         tools:context=".MainActivity">
 
         <TextView
@@ -17,19 +17,26 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_margin="16dp"
-            android:textColor="@color/black"
             android:fontFamily="casual"
             android:text="@string/biodata_diri"
+            android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/edtName"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:textColor="@color/black"
-            android:hint="@string/nama" />
+            android:layout_margin="16dp">
+
+            <EditText
+                android:id="@+id/edtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/transparent"
+                android:hint="@string/nama"
+                android:inputType="text"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Spinner
             android:id="@+id/spinnerGender"
@@ -38,30 +45,51 @@
             android:layout_margin="16dp"
             android:entries="@array/jenis_kelamin" />
 
-        <EditText
-            android:id="@+id/edtUmur"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:layout_margin="16dp"
-            android:hint="Umur (th)" />
+            android:layout_margin="16dp">
 
-        <EditText
-            android:id="@+id/edtEmail"
+            <EditText
+                android:id="@+id/edtUmur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/age"
+                android:inputType="number"
+                android:backgroundTint="@color/transparent"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:layout_margin="16dp"
-            android:hint="@string/email" />
+            android:layout_margin="16dp">
+
+            <EditText
+                android:id="@+id/edtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/transparent"
+                android:hint="@string/email"
+                android:textColor="@color/black"
+                android:inputType="textEmailAddress"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp">
 
         <EditText
             android:id="@+id/edtTelp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:textColor="@color/black"
             android:hint="@string/telp"
-            android:inputType="phone" />
+            android:backgroundTint="@color/transparent"
+            android:inputType="phone"
+            android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <EditText
             android:id="@+id/edtAddress"
@@ -69,17 +97,17 @@
             android:layout_height="120dp"
             android:layout_margin="16dp"
             android:hint="@string/alamat"
-            android:textColor="@color/black"
-            android:inputType="textMultiLine" />
+            android:inputType="textMultiLine"
+            android:textColor="@color/black" />
 
         <Button
             android:id="@+id/btnSave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:textColor="@color/white"
             android:background="@drawable/button_bg"
-            android:text="@string/save" />
+            android:text="@string/save"
+            android:textColor="@color/white" />
 
     </LinearLayout>
 </ScrollView>

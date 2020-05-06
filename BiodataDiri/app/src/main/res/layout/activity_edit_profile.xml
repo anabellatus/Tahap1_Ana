@@ -11,21 +11,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
+        android:fontFamily="casual"
         android:gravity="center_horizontal"
-        android:text="Edit Profil" />
+        android:text="@string/edit_tittle"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/edtProfilName"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:hint="Nama" />
+        android:layout_margin="16dp">
+        <EditText
+            android:id="@+id/edtProfilName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/transparent"
+            android:hint="@string/nama"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnEditSave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="SIMPAN" />
+        android:background="@drawable/button_bg"
+        android:text="@string/save"
+        android:textColor="@color/white" />
 
 </LinearLayout>
